@@ -5,6 +5,15 @@ class ReservationsController < ApplicationController
   # GET /reservations.json
   def index
     @reservations = Reservation.all
+    @rooms = Room.all
+    @rooms_status = []
+    @rooms.each do |room|
+      if room.reserved == true
+	@rooms_status.push("hotel-res-room-cell")
+      else
+	@rooms_status.push("hotel-ava-room-cell")
+      end
+    end
   end
 
   # GET /reservations/1
