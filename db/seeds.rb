@@ -5,3 +5,9 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+init_room = 100
+
+12.times do |i|
+  Room.create(room_number: "#{i + init_room}", reserved: false)
+end
