@@ -1,0 +1,69 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+.hotel-room-table {
+  border-collapse: collapse;
+  border: 2px solid #996633; 
+}
+
+.hotel-ava-room-cell {
+  background-color: #488689;
+  width: 40px;
+  height: 50px;
+  color: #FFFFFF;
+  text-align: center;
+  vertical-align: center;
+  border: 1px solid #FFFFFF;
+}
+
+.hotel-ava-room-cell:hover {
+  cursor: pointer;
+  background-color: #658788;
+}
+
+.hotel-res-room-cell {
+  background-color: #864D57;
+  width: 40px;
+  height: 50px;
+  color: #FFFFFF;
+  text-align: center;
+  vertical-align: center;
+  border: 1px solid #FFFFFF;
+}
+
+.hotel-res-room-cell:hover {
+  cursor: pointer;
+  background-color: #86676D;
+}
+
+.hotel-hori-hall-cell {
+  background-color: #999966;
+  height: 20px;
+}
+
+.hotel-vert-hall-cell {
+  background-color: #999966;
+  width: 40px;
+  height: 50px;
+}
+
+.hotel-ava-text {
+  color: #488689;
+}
+
+.hotel-res-text {
+  color: #864D57;
+}

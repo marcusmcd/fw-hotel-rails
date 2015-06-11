@@ -1,0 +1,81 @@
+<h3>Room Status (<span class="hotel-ava-text">available</span>/<span class="hotel-res-text">reserved</span>):</h3>
+
+<table class="hotel-room-table">
+  <tbody>
+    <tr>
+      <td class="hotel-vert-hall-cell"></td>
+      <td class="hotel-ava-room-cell" id="room_0">
+        100
+      </td>
+      <td class="hotel-ava-room-cell" id="room_1">
+        101
+      </td>
+      <td class="hotel-ava-room-cell" id="room_2">
+        102
+      </td>
+      <td class="hotel-vert-hall-cell"></td>
+      <td class="hotel-ava-room-cell" id="room_3">
+        103
+      </td>
+      <td class="hotel-ava-room-cell" id="room_4">
+        104
+      </td>
+      <td class="hotel-ava-room-cell" id="room_5">
+        105
+      </td>
+    </tr>
+    <tr>
+      <td class="hotel-hori-hall-cell" colspan="8"></td>
+    </tr>
+    <tr>
+      <td class="hotel-ava-room-cell" id="room_6">
+        106
+      </td>
+      <td class="hotel-ava-room-cell" id="room_7">
+        107
+      </td>
+      <td class="hotel-ava-room-cell" id="room_8">
+        108
+      </td>
+      <td class="hotel-ava-room-cell" id="room_9">
+        109
+      </td>
+      <td class="hotel-ava-room-cell" id="room_10">
+        110
+      </td>
+      <td class="hotel-ava-room-cell" id="room_11">
+        111
+      </td>
+      <td class="hotel-vert-hall-cell"></td>
+      <td class="hotel-vert-hall-cell"></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Reservation Detail:</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Room</th>
+      <th>Reservation date</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @reservations.each do |reservation| %>
+      <tr>
+        <td><%= reservation.room_id %></td>
+        <td><%= reservation.reservation_date %></td>
+        <td><%= link_to 'Show', reservation %></td>
+        <td><%= link_to 'Edit', edit_reservation_path(reservation) %></td>
+        <td><%= link_to 'Destroy', reservation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Reservation', new_reservation_path %>
