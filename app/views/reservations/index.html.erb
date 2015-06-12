@@ -1,4 +1,5 @@
-<h3>Room status for <%= Date.today %> (<span class="hotel-ava-text">available</span>/<span class="hotel-res-text">reserved</span>):</h3>
+<% today = Date.today.to_formatted_s(:month_day_year) %> 
+<h3>Room status for <span id="hotel-date"><%= today %></span> (<span class="hotel-ava-text">available</span>/<span class="hotel-res-text">reserved</span>):</h3>
 
 <table class="hotel-room-table">
   <tbody>
