@@ -1,13 +1,21 @@
-<h3>Room Status (<span class="hotel-ava-text">available</span>/<span class="hotel-res-text">reserved</span>):</h3>
+<h3>Room status for <%= Date.today %> (<span class="hotel-ava-text">available</span>/<span class="hotel-res-text">reserved</span>):</h3>
+<p><%= @today_res %></p>
 
 <table class="hotel-room-table">
   <tbody>
     <tr>
       <td class="hotel-vert-hall-cell"></td>
       <td class="<%= @rooms_status[0] %>" id="room_0">
+        <% if @today_res.include?(100) %>
+          <% this_id = @today_res.index(100) %>
+          <%= this_id %>
+        <% end %>
         100
       </td>
       <td class="<%= @rooms_status[1] %>" id="room_1">
+        <% if @today_res.include?(101) %>
+          <%= @today_res %>
+        <% end %>
         101
       </td>
       <td class="<%= @rooms_status[2] %>" id="room_2">

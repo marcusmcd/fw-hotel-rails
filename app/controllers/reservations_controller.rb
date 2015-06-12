@@ -14,6 +14,12 @@ class ReservationsController < ApplicationController
 	@rooms_status.push("hotel-ava-room-cell")
       end
     end
+    @today_res = []
+    @reservations.each do |res|
+      if res.reservation_date == Date.today
+	@today_res[res.id] = (res.room_id)
+      end
+    end
   end
 
   # GET /reservations/1

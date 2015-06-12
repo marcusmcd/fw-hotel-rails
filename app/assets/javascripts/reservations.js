@@ -1,4 +1,4 @@
 $( document ).ready(function() {
-  $( ".hotel-room-table" ).before( "<div type='text' id='hotel-room-date'></div>" );
+  $( ".hotel-room-table" ).before( "<input type='text' id='hotel-room-date'></input>" );
   $( "#hotel-room-date" ).datepicker();
 });
