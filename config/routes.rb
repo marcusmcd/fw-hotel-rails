@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :res_dates
+
   root 'reservations#index'
   resources :rooms
   resources :reservations

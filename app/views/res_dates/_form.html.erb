@@ -1,0 +1,21 @@
+<%= form_for(@res_date) do |f| %>
+  <% if @res_date.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@res_date.errors.count, "error") %> prohibited this res_date from being saved:</h2>
+
+      <ul>
+      <% @res_date.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :res_date %><br>
+    <%= f.datetime_select :res_date %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
