@@ -76,6 +76,15 @@ class ReservationsController < ApplicationController
     end
   end
 
+  def show_by_date
+    month = params[:month]
+    day = params[:day]
+    year = params[:year]
+    date = year + "-" + month + "-" + day
+    @reservations = Reservation.where(reservation_date: (date.to_date))
+    #@reservations = Reservation.all
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_reservation

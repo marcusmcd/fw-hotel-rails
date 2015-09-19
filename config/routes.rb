@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   root 'reservations#index'
   resources :rooms
   resources :reservations
+  get 'reservations/:month/:day/:year', to: 'reservations#show_by_date'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
