@@ -9,15 +9,15 @@ class ReservationsController < ApplicationController
     @rooms_status = []
     @rooms.each do |room|
       if room.reserved == true
-	@rooms_status.push("hotel-res-room-cell")
+	  @rooms_status.push("hotel-res-room-cell")
       else
-	@rooms_status.push("hotel-ava-room-cell")
+	  @rooms_status.push("hotel-ava-room-cell")
       end
     end
     @today_res = []
     @reservations.each do |res|
       if res.reservation_date == Date.today
-	@today_res[res.id] = (res.room_id)
+	  @today_res[res.id] = (res.room_id)
       end
     end
   end
@@ -77,12 +77,27 @@ class ReservationsController < ApplicationController
   end
 
   def show_by_date
-    month = params[:month]
-    day = params[:day]
-    year = params[:year]
+    date_params = params[:date]
+    year = date_params[:year]
+    month = date_params[:month]
+    day = date_params[:day]
     date = year + "-" + month + "-" + day
-    @reservations = Reservation.where(reservation_date: (date.to_date))
-    #@reservations = Reservation.all
+    @reservations = Reservation.where(reservation_date: date.to_date)
+    @rooms = Room.all
+    @rooms_status = []
+    @rooms.each do |room|
+      if room.reserved == true
+    @rooms_status.push("hotel-res-room-cell")
+      else
+    @rooms_status.push("hotel-ava-room-cell")
+      end
+    end
+    @today_res = []
+    @reservations.each do |res|
+      if res.reservation_date == date.to_date
+    @today_res[res.id] = (res.room_id)
+      end
+    end
   end
 
   private

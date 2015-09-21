@@ -1,9 +1,9 @@
 <% today = Date.today.to_formatted_s(:month_day_year) %>
 <h3>Room status for <span id="hotel-date"><%= today %></span> (<span class="hotel-ava-text">available</span>/<span class="hotel-res-text">reserved</span>):</h3>
 
-<%= select_date(Time.now + 6.days) %>
-<%= button_tag 'update' %>
-<br>
+<%= form_tag("/reservations/by/date", method: "get" ) do %>
+  <%= select_date(Time.now) %>  <%= submit_tag("Update") %>
+<% end %>
 
 <table class="hotel-room-table">
   <tbody>
