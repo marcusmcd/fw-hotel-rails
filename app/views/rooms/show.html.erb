@@ -1,6 +1,13 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+    <strong>Room reservations:</strong>
+    <% @reservations.each do |res| %>
+      <p><%= res.reservation_date %></p>
+    <% end %>
+</p>
+
+<p>
   <strong>Room number:</strong>
   <%= @room.room_number %>
 </p>
