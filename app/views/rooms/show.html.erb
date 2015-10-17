@@ -2,7 +2,7 @@
 
 <p>
     <strong>Room reservations:</strong>
-    <% @reservations.each do |res| %>
+    <% @res_for_this.each do |res| %>
       <p><%= res.reservation_date %></p>
     <% end %>
 </p>

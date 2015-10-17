@@ -11,7 +11,7 @@ class RoomsController < ApplicationController
   # GET /rooms/1.json
   def show
     @reservations = Reservation.all
-    @res_for_this = @reservations.where(room_id = @room.room_number)
+    @res_for_this = @reservations.where(room_id: @room.room_number)
   end
 
   # GET /rooms/new
