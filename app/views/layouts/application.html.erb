@@ -6,6 +6,13 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
+<header>
+  <nav>
+   <a href="/reservations/">Reservations</a> |
+   <a href="/rooms/">Rooms</a> |
+   <a href="/res_dates/">Reservation Dates</a>
+  </nav>
+</header>
 <body>
 
 <%= yield %>

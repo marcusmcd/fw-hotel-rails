@@ -1,0 +1,197 @@
+<% today = Date.today.to_formatted_s(:month_day_year) %>
+<h3>Room status for <span id="hotel-date"><%= today %></span> (<span class="hotel-ava-text">available</span>/<span class="hotel-res-text">reserved</span>):</h3>
+
+<%= form_tag("/reservations/by/date", method: "get" ) do %>
+  <%= select_date(Time.now) %>  <%= submit_tag("Update") %>
+<% end %>
+
+<table class="hotel-room-table">
+  <tbody>
+    <tr>
+      <td class="hotel-vert-hall-cell"></td>
+
+      <% this_room = 100 %>
+      <% if @today_res.include?(this_room) %>
+        <td class="hotel-res-room-cell" id='<%= "#{this_room}" %>'>
+        <% this_id = @today_res.index(this_room) %>
+        <%= link_to "#{this_room}", edit_reservation_path(this_id) %>
+        </td>
+      <% else %>
+        <td class="hotel-ava-room-cell" id='<%= "#{this_room}" %>'>
+        <%= "#{this_room}" %>
+        </td>
+      <% end %>
+
+      <% this_room = 101 %>
+      <% if @today_res.include?(this_room) %>
+        <td class="hotel-res-room-cell" id='<%= "#{this_room}" %>'>
+        <% this_id = @today_res.index(this_room) %>
+        <%= link_to "#{this_room}", edit_reservation_path(this_id) %>
+        </td>
+      <% else %>
+        <td class="hotel-ava-room-cell" id='<%= "#{this_room}" %>'>
+        <%= "#{this_room}" %>
+        </td>
+      <% end %>
+
+      <% this_room = 102 %>
+      <% if @today_res.include?(this_room) %>
+        <td class="hotel-res-room-cell" id='<%= "#{this_room}" %>'>
+        <% this_id = @today_res.index(this_room) %>
+        <%= link_to "#{this_room}", edit_reservation_path(this_id) %>
+        </td>
+      <% else %>
+        <td class="hotel-ava-room-cell" id='<%= "#{this_room}" %>'>
+        <%= "#{this_room}" %>
+        </td>
+      <% end %>
+
+      <td class="hotel-vert-hall-cell"></td>
+
+      <% this_room = 103 %>
+      <% if @today_res.include?(this_room) %>
+        <td class="hotel-res-room-cell" id='<%= "#{this_room}" %>'>
+        <% this_id = @today_res.index(this_room) %>
+        <%= link_to "#{this_room}", edit_reservation_path(this_id) %>
+        </td>
+      <% else %>
+        <td class="hotel-ava-room-cell" id='<%= "#{this_room}" %>'>
+        <%= "#{this_room}" %>
+        </td>
+      <% end %>
+
+      <% this_room = 104 %>
+      <% if @today_res.include?(this_room) %>
+        <td class="hotel-res-room-cell" id='<%= "#{this_room}" %>'>
+        <% this_id = @today_res.index(this_room) %>
+        <%= link_to "#{this_room}", edit_reservation_path(this_id) %>
+        </td>
+      <% else %>
+        <td class="hotel-ava-room-cell" id='<%= "#{this_room}" %>'>
+        <%= "#{this_room}" %>
+        </td>
+      <% end %>
+
+      <% this_room = 105 %>
+      <% if @today_res.include?(this_room) %>
+        <td class="hotel-res-room-cell" id='<%= "#{this_room}" %>'>
+        <% this_id = @today_res.index(this_room) %>
+        <%= link_to "#{this_room}", edit_reservation_path(this_id) %>
+        </td>
+      <% else %>
+        <td class="hotel-ava-room-cell" id='<%= "#{this_room}" %>'>
+        <%= "#{this_room}" %>
+        </td>
+      <% end %>
+
+    </tr>
+    <tr>
+      <td class="hotel-hori-hall-cell" colspan="8"></td>
+    </tr>
+    <tr>
+
+      <% this_room = 106 %>
+      <% if @today_res.include?(this_room) %>
+        <td class="hotel-res-room-cell" id='<%= "#{this_room}" %>'>
+        <% this_id = @today_res.index(this_room) %>
+        <%= link_to "#{this_room}", edit_reservation_path(this_id) %>
+        </td>
+      <% else %>
+        <td class="hotel-ava-room-cell" id='<%= "#{this_room}" %>'>
+        <%= "#{this_room}" %>
+        </td>
+      <% end %>
+
+      <% this_room = 107 %>
+      <% if @today_res.include?(this_room) %>
+        <td class="hotel-res-room-cell" id='<%= "#{this_room}" %>'>
+        <% this_id = @today_res.index(this_room) %>
+        <%= link_to "#{this_room}", edit_reservation_path(this_id) %>
+        </td>
+      <% else %>
+        <td class="hotel-ava-room-cell" id='<%= "#{this_room}" %>'>
+        <%= "#{this_room}" %>
+        </td>
+      <% end %>
+
+      <% this_room = 108 %>
+      <% if @today_res.include?(this_room) %>
+        <td class="hotel-res-room-cell" id='<%= "#{this_room}" %>'>
+        <% this_id = @today_res.index(this_room) %>
+        <%= link_to "#{this_room}", edit_reservation_path(this_id) %>
+        </td>
+      <% else %>
+        <td class="hotel-ava-room-cell" id='<%= "#{this_room}" %>'>
+        <%= "#{this_room}" %>
+        </td>
+      <% end %>
+
+      <% this_room = 109 %>
+      <% if @today_res.include?(this_room) %>
+        <td class="hotel-res-room-cell" id='<%= "#{this_room}" %>'>
+        <% this_id = @today_res.index(this_room) %>
+        <%= link_to "#{this_room}", edit_reservation_path(this_id) %>
+        </td>
+      <% else %>
+        <td class="hotel-ava-room-cell" id='<%= "#{this_room}" %>'>
+        <%= "#{this_room}" %>
+        </td>
+      <% end %>
+
+      <% this_room = 110 %>
+      <% if @today_res.include?(this_room) %>
+        <td class="hotel-res-room-cell" id='<%= "#{this_room}" %>'>
+        <% this_id = @today_res.index(this_room) %>
+        <%= link_to "#{this_room}", edit_reservation_path(this_id) %>
+        </td>
+      <% else %>
+        <td class="hotel-ava-room-cell" id='<%= "#{this_room}" %>'>
+        <%= "#{this_room}" %>
+        </td>
+      <% end %>
+
+      <% this_room = 111 %>
+      <% if @today_res.include?(this_room) %>
+        <td class="hotel-res-room-cell" id='<%= "#{this_room}" %>'>
+        <% this_id = @today_res.index(this_room) %>
+        <%= link_to "#{this_room}", edit_reservation_path(this_id) %>
+        </td>
+      <% else %>
+        <td class="hotel-ava-room-cell" id='<%= "#{this_room}" %>'>
+        <%= "#{this_room}" %>
+        </td>
+      <% end %>
+
+      <td class="hotel-vert-hall-cell"></td>
+      <td class="hotel-vert-hall-cell"></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Reservation Detail:</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Room</th>
+      <th>Reservation date</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @reservations.each do |reservation| %>
+      <tr>
+        <td><%= reservation.room_id %></td>
+        <td class="hotel-res-dates" data-res-id="<%= reservation.id %>"><%= reservation.reservation_date.to_formatted_s(:month_day_year) %></td>
+        <td><%= link_to 'Show', reservation %></td>
+        <td><%= link_to 'Edit', edit_reservation_path(reservation) %></td>
+        <td><%= link_to 'Destroy', reservation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Reservation', new_reservation_path %>
